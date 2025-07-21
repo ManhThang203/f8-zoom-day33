@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 15px;
+  line-height: 1.3;
+  font-family: "Source Sans 3", sans-serif;
+  /* 
+      background-repeat: no-repeat;
+      background-position: center center;
+   */
+  background: url("../img/bg.svg") no-repeat center center;
+  
+  /* phóng to hình để bao phủ toàn bộ màn hình */
+  background-size: cover;
+}
+/* Tiêu đề của modal */
+.heading {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+/* nút ấn mở modal */
+.footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.btn {
+  width: 100px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ccc;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  color: #fff;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+/* Nút bấm của Modal */
+.btn {
+  padding: 5px;
+  border-radius: 5px;
+  color: #ccc;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  color: #fff;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}

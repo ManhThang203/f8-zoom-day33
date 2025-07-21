@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App-Modal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <button class="btn" id="btn-open">Click</button>
+     <!-- Toast placeholder -->
+    <div id="toast"></div>
+    <!-- Component  -->
+    <app-modal heading="😉 Chào Mừng bạn">
+      <h2 class="heading" slot="content-title">Modal Content</h2>
+      <div slot="btn-modal" class="footer">
+        <button class="btn" id="btn-canncel">Canncel</button>
+        <button class="btn">OK</button>
+      </div>
+    </app-modal>
+
+    <!-- Templeted -->
+    <template id="app-modal-tpl" hidden>
+      <div class="modal">
+        <div class="modal-content" id="modal-content">
+          <div class="header">
+            <h1 class="heading-title" id="heading"></h1>
+          </div>
+          <div class="content">
+            <slot name="content-title"></slot>
+          </div>
+          <slot name="btn-modal"></slot>
+          <!-- <div class="footer">
+          </div> -->
+          <button class="btn-close" id="btn-close">x</button>
+        </div>
+      </div>
+    </template>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

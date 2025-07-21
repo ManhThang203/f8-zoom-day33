@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(0, 0, 0, 0.15); */
+  backdrop-filter: blur(15px);
+}
+.modal-content {
+  position: relative;
+  min-width: 500px;
+  padding: 20px 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  animation: fadeIn 0.4s forwards;
+}
+
+/* Hiệu animation cho modal */
+/* khi hiện lên */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.modal-content.hiden {
+  animation: fadeOut 0.4s forwards;
+}
+/* Khi ấn đi */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.heading-title {
+  position: relative;
+  font-size: 25px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.heading-title::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  height: 0.5px;
+  width: 100%;
+  background: #ccc;
+}
+.heading {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 7px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+.btn-close:hover {
+  background: #fad0c4;
+  color: #fff;
+}
